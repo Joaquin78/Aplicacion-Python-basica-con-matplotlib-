@@ -1,7 +1,6 @@
 # ------------------------------------------------------
 # Aplicación Python 3.9 (64 bits) básica para mostrar elementos gráficos 2D,
 # con el paquete 'matplotlib'.
-# @utor: Joaquín Miguel Parrilla Serrano
 #-------------------------------------------------------
 
 # Módulo de funciones matemáticas 'math' https://docs.python.org/es/3/library/math.html
@@ -14,10 +13,13 @@ import numpy as np
 import matplotlib.pyplot as plt 
 
 def main():
+    # Declaramos la variable local 'x', asignándola la función 'arange' instanciada de np.
     x = np.arange(0, radians(1800), radians(12))
-    # Calculamos la función Coseno, pasando los párametros formales antes declarados
-    plt.plot(x, np.cos(x), 'b')
-    # Mostramos gráficamente la función Coseno antes implementada
+    
+    # Calculamos la función Seno y Coseno, pasando como parámetro formal la variable local 'x' antes declarada.
+    plt.plot(x, np.cos(x), np.sin(x), 'b')
+ 
+    # Mostramos gráficamente las funciones Seno y Coseno.
     plt.show()
 
 main()
